@@ -108,6 +108,9 @@ int main(void)
 
 			// Start record
 			record_audio(BUTTON4);
+//			for (size_t i = 0; i < BUFFER_SIZE; ++i) {
+//				recorded_data[0][i] = 123;
+//			}
 			change_led_duty_cycle(BUTTON4, 100);
 			change_led_duty_cycle(BUTTON3, led[3].brightness_passive);
 
@@ -145,10 +148,10 @@ int main(void)
 				change_led_duty_cycle(BUTTON2, led[BUTTON2].brightness_passive);
 			} else if (!strcmp(word, "Ni")) {
 				printf("Ni\n\r");
-				change_led_duty_cycle(BUTTON0, led[BUTTON0].brightness_passive);
+				change_led_duty_cycle(BUTTON0, led[BUTTON0].brightness_active);
 			} else if (!strcmp(word, "Tak")) {
 				printf("Tak\n\r");
-				change_led_duty_cycle(BUTTON1, led[BUTTON1].brightness_passive);
+				change_led_duty_cycle(BUTTON1, led[BUTTON1].brightness_active);
 			} else {
 				printf("Inshe\n\r");
 				change_led_duty_cycle(BUTTON2, led[BUTTON2].brightness_passive);
