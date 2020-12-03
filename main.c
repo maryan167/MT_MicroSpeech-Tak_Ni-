@@ -157,7 +157,7 @@ int main(void)
 				change_led_duty_cycle(BUTTON2, led[BUTTON2].brightness_passive);
 			}
 
-			//play_record();
+			play_record();
 		}
 	}
 }
