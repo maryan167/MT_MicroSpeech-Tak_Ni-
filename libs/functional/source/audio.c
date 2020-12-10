@@ -196,6 +196,9 @@ void record_audio(uint8_t active_button){
 	// Stop record
 	change_led_status(active_button);
 	Cy_DMA_Channel_Disable(CYBSP_DMA_PDM_HW, CYBSP_DMA_PDM_CHANNEL);
+
+	/* Reset the channel index for the next recording */
+	CYBSP_DMA_PDM_HW->CH_STRUCT[CYBSP_DMA_PDM_CHANNEL].CH_IDX = 0;
 }
 
 

@@ -119,13 +119,13 @@ int main(void)
 
 			check(recorded_data[1], frame_num, frame_size, answer, words_count);
 
-			printf("Prediction: [");
+			/*printf("Prediction: [");
 
 			for (size_t i = 0; i < words_count; i++) {
 				printf(" %d", answer[i]);
 			}
 
-			printf(" ]\n\r");
+			printf(" ]\n\r");*/
 
 			int c = -1;
 			int max = 0;
@@ -156,6 +156,7 @@ int main(void)
 				printf("Inshe\n\r");
 				change_led_duty_cycle(BUTTON2, led[BUTTON2].brightness_passive);
 			}
+			printf("\n\r");
 
 			play_record();
 		}
